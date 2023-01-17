@@ -9,13 +9,14 @@ import AllocationForm from './components/AllocationForm';
 import RemainingBudget from './components/Remaining'
 
 const App = () => {
+    const expenseTotal =  ExpenseTotal;
     return (
         <AppProvider>
             <div className='container'>
             <h1 className='mt-3'>Company's Budget Allocation</h1>
                 <div className='row mt-3'>
                     <div className='col-sm'>
-                        <Budget />
+                        <Budget expenseTotal={expenseTotal} />
                     </div>
                     <div className='col-sm'>
                         <RemainingBudget />
