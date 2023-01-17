@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
-import ExpenseTotal from './ExpenseTotal';
 
 const Budget = () => {
     const { budget, dispatch } = useContext(AppContext);
@@ -10,9 +9,7 @@ const Budget = () => {
 
     const handleChange = (e) => {
     const newBudget = e.target.value;
-    if (isNaN(newBudget)) {
-        alert('Please enter a valid number');
-    } else if (newBudget > 20000) {
+    if (newBudget > 20000) {
         alert('Cannot set budget over 20000');
     } else if (newBudget < expenseTotal) {
         alert('You cannot reduce the budget value lower than the spending');

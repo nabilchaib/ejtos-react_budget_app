@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Add code to import the components
 import { AppProvider } from './context/AppContext';
@@ -31,13 +31,12 @@ const App = () => {
                     </div>
                     <div className='col-sm'>
                     <label>Currency :
-                    <select value={currency} onChange={handleCurrencyChange}>
+                    <select className='form-control' value={currency} onChange={handleCurrencyChange}>
                         <option value="£">£ Pound</option>
                         <option value="$">$ Dollar</option>
                         <option value="€">€ Euro</option>
                         <option value="₹">₹ Ruppee</option>
                     </select>
-
                     </label>
                     </div>
                 </div>
